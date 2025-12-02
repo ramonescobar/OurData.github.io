@@ -31,3 +31,29 @@
   border-radius: 12px;
   border-left: 4px solid var(--primary);
 }
+/* MAPA REGIONAL */
+.map-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.map-svg {
+  width: 300px;
+  height: auto;
+}
+
+.map-details {
+  list-style: none;
+  padding: 0;
+}
+
+.map-details li {
+  margin-bottom: 10px;
+  background: var(--card);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
