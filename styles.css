@@ -1,9 +1,18 @@
-body {
+/* RESET GENERAL */
+html, body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  transition: 0.3s;
+  padding: 0;
+  overflow-x: hidden !important;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+* {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* THEMES */
 [data-theme='dark'] { 
   --bg: #030b1a;
   --text: #e6ecff;
@@ -20,7 +29,11 @@ body {
   --nav-bg: rgba(255,255,255,0.85);
 }
 
-body { background: var(--bg); color: var(--text); }
+body { 
+  background: var(--bg); 
+  color: var(--text); 
+  font-family: "Inter", sans-serif;
+}
 
 /* NAVBAR */
 .navbar {
@@ -48,26 +61,42 @@ nav a {
   font-weight: 500;
 }
 
-/* Hamburger */
 .burger {
   display: none;
   cursor: pointer;
   font-size: 2rem;
 }
 
-/* HERO FIX */
+/* HERO */
 .hero {
   height: 100vh;
-  padding-top: 100px; /* evita superposición con navbar */
+  padding-top: 100px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   text-align: center;
 }
 
-/* BUTTON */
-.btn-primary {
+.hero-content {
+  z-index: 10;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+/* CANVAS */
+#bgCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 1;
+  display: block;
+}
+
+/* BUTTONS */
+.btn-primary{
   background: var(--primary);
   padding: 12px 28px;
   color: white;
@@ -75,7 +104,7 @@ nav a {
   border-radius: 10px;
   font-weight: 600;
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .toggle-btn {
@@ -92,12 +121,10 @@ nav a {
   margin: auto;
 }
 
-/* Text improvement */
 .section-desc {
   max-width: 650px;
-  margin-top: -10px;
-  margin-bottom: 40px;
-  opacity: 0.85;
+  opacity: 0.8;
+  margin-bottom: 35px;
 }
 
 /* GRID */
@@ -115,7 +142,7 @@ nav a {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 /* TEAM */
@@ -164,7 +191,9 @@ nav a {
     box-shadow: -3px 5px 12px rgba(0,0,0,0.35);
   }
 
-  .burger { display: block; }
+  .burger { 
+    display: block; 
+  }
 }
 
 footer {
