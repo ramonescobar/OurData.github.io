@@ -2,12 +2,12 @@
 <html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO -->
-  <title>DataVision | Analítica, Modelos Predictivos y Ciencia de Datos en LATAM</title>
-  <meta name="description" content="DataVision ofrece soluciones avanzadas en analítica, modelos predictivos, riesgo crediticio, ciencia de datos, BI y automatización para empresas en Centroamérica, el Caribe y Latinoamérica.">
-  <meta name="keywords" content="analítica, machine learning, data science, modelos predictivos, riesgo crediticio, IFRS9, dashboards, BI, Centroamérica, LATAM">
+  <title>DataVision | Analítica, Modelos Predictivos & Ciencia de Datos en LATAM</title>
+  <meta name="description" content="DataVision ofrece soluciones de analítica avanzada, modelos predictivos, ciencia de datos, riesgo crediticio y BI para empresas en Centroamérica y Latinoamérica.">
+  <meta name="keywords" content="analítica, modelos predictivos, machine learning, riesgo crediticio, data science, BI, IFRS9, Centroamérica, LATAM">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -16,16 +16,16 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-    <div class="logo">🔷 DataVision</div>
-    <div class="burger" id="burger">☰</div>
+  <div class="logo">🔷 DataVision</div>
+  <div class="burger" id="burger">☰</div>
 
-    <nav id="nav-menu">
-      <a href="#about-us">Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#mapa">Región</a>
-      <a href="#contacto">Contacto</a>
-      <button id="themeToggle" class="toggle-btn">🌙</button>
-    </nav>
+  <nav id="nav-menu">
+    <a href="#about-us">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#mapa">Región</a>
+    <a href="#contacto">Contacto</a>
+    <button id="themeToggle" class="toggle-btn">🌙</button>
+  </nav>
 </header>
 
 <main>
@@ -34,118 +34,136 @@
   <section class="hero" id="inicio">
     <canvas id="bgCanvas"></canvas>
 
-    <div class="hero-content">
-      <h1>Soluciones en Analítica, Modelos Predictivos & Ciencia de Datos</h1>
-      <p>
-        Impulsamos decisiones estratégicas mediante modelos de riesgo, analítica avanzada y automatización de datos para empresas en Centroamérica y Latinoamérica.
-      </p>
+    <div class="hero-content reveal">
+      <h1>Analítica, Modelos Predictivos & Ciencia de Datos</h1>
+      <p>Soluciones basadas en datos para impulsar decisiones estratégicas en Centroamérica y LATAM.</p>
       <a href="#about-us" class="btn-primary">Conocer más</a>
     </div>
   </section>
 
-
-  <!-- ABOUT US (Antes de Servicios) -->
-  <section id="about-us" class="section">
+  <!-- ABOUT US -->
+  <section id="about-us" class="section reveal">
     <h2>Nosotros</h2>
     <p class="section-desc">
-      En DataVision somos un equipo especializado en analítica avanzada, modelos predictivos y soluciones de ciencia de datos. 
-      Nuestro enfoque combina experiencia técnica con comprensión profunda de industrias como 
-      <strong>finanzas, telecomunicaciones y retail</strong> en la región de <strong>Centroamérica y el Caribe</strong>.
+      En DataVision somos un equipo de especialistas en analítica, machine learning, riesgo crediticio,
+      automatización de datos y visualización ejecutiva.  
+      Trabajamos con organizaciones de sectores como <strong>finanzas, telecomunicaciones y retail</strong> 
+      en Centroamérica, el Caribe y Sudamérica.
       <br><br>
-      Actualmente nuestro equipo integra profesionales con formación en data science, estadística, economía y análisis cuantitativo. 
-      A medida que expandimos nuestras operaciones, incorporamos especialistas en ingeniería de datos, automatización, IA aplicada y visualización ejecutiva.
+      Nuestro equipo actual cuenta con perfiles en ciencia de datos, estadística, economía y BI.
+      A medida que crecemos, incorporamos talento en ingeniería de datos, IA aplicada,
+      automatización y desarrollo de soluciones escalables.
     </p>
 
-    <!-- TEAM CARD -->
-    <div class="profile-box">
-      <img src="https://placehold.co/300x300" class="profile-photo" alt="Equipo DataVision">
-      <div>
-        <h3>Equipo DataVision</h3>
-        <p>Data Science • Machine Learning • Riesgo Crediticio • Automatización Analítica • BI</p>
-        <a href="https://www.linkedin.com/in/ramon-escobar-data" target="_blank" class="btn-primary">LinkedIn</a>
+    <!-- TEAM GRID -->
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <img src="https://placehold.co/300x300" alt="Equipo">
+        <h4>Equipo Actual</h4>
+        <p>Expertos en modelos predictivos, riesgo, BI y analítica avanzada.</p>
+      </div>
+
+      <div class="team-card">
+        <img src="https://placehold.co/300x300" alt="Futuro Equipo">
+        <h4>Equipo en Expansión</h4>
+        <p>Buscamos sumar talento en ingeniería de datos e inteligencia artificial.</p>
       </div>
     </div>
   </section>
-
 
   <!-- SERVICIOS -->
-  <section id="servicios" class="section">
+  <section id="servicios" class="section reveal">
     <h2>Servicios</h2>
-    <p class="section-desc">Soluciones diseñadas para organizaciones que buscan transformar datos en decisiones estratégicas.</p>
+    <p class="section-desc">Soluciones diseñadas para organizaciones que buscan fortalecer su estrategia con datos.</p>
 
     <div class="grid">
-      <div class="card">
-        <div class="icon">🤖</div>
+
+      <!-- Modelos Predictivos -->
+      <div class="card reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <path d="M12 2a7 7 0 0 0-7 7v3H4a1 1 0 0 0 0 2h1v3a7 7 0 0 0 14 0v-3h1a1 1 0 0 0 0-2h-1V9a7 7 0 0 0-7-7z"/>
+        </svg>
         <h3>Modelos Predictivos</h3>
-        <p>Scoring, forecasting, clasificación, segmentación y modelos de optimización.</p>
+        <p>Scoring, forecasting, clasificación, segmentación y optimización.</p>
       </div>
 
-      <div class="card">
-        <div class="icon">📉</div>
+      <!-- Riesgo Crediticio -->
+      <div class="card reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+        </svg>
         <h3>Riesgo Crediticio IFRS9</h3>
-        <p>PD, LGD, EAD, vintage curves, provisiones IFRS9, validaciones y monitoreos.</p>
+        <p>PD, LGD, EAD, provisiones, validaciones y monitoreo.</p>
       </div>
 
-      <div class="card">
-        <div class="icon">📊</div>
+      <!-- BI -->
+      <div class="card reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <path d="M3 3h2v18H3V3zm4 7h2v11H7V10zm4-4h2v15h-2V6zm4 6h2v9h-2v-9zm4-8h2v17h-2V4z"/>
+        </svg>
         <h3>Business Intelligence</h3>
-        <p>Dashboards ejecutivos, automatización de KPIs y analítica para dirección regional.</p>
+        <p>Dashboards ejecutivos, visualización estratégica y automatización de KPIs.</p>
       </div>
 
-      <div class="card">
-        <div class="icon">⚙️</div>
+      <!-- Automatización -->
+      <div class="card reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+        </svg>
         <h3>Automatización & Pipelines</h3>
-        <p>ETL, pipelines inteligentes, reducción de costos operativos y eficiencia analítica.</p>
+        <p>ETL, integraciones, pipelines y reducción de carga operativa.</p>
       </div>
 
-      <div class="card">
-        <div class="icon">🧠</div>
+      <!-- IA -->
+      <div class="card reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2z"/>
+        </svg>
         <h3>IA & NLP</h3>
-        <p>Implementación de LLMs, motores de recomendación, clasificación automática y más.</p>
+        <p>LLMs, clasificación automática, extracción de texto y AutoML.</p>
       </div>
 
-      <div class="card">
-        <div class="icon">🔍</div>
+      <!-- Investigación Cuantitativa -->
+      <div class="card reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <path d="M12 4 2 20h20L12 4z"/>
+        </svg>
         <h3>Investigación Cuantitativa</h3>
-        <p>Encuestas, análisis estadístico y estudios de mercado basados en datos.</p>
+        <p>Análisis estadístico, encuestas y estudios basados en datos.</p>
       </div>
+
     </div>
   </section>
 
-
-  <!-- MAPA DE CENTROAMÉRICA + REGIÓN -->
-  <section id="mapa" class="section">
-    <h2>Presencia en Centroamérica & Expertise Regional</h2>
-    <p class="section-desc">
-      DataVision ha contribuido al desarrollo de soluciones analíticas en múltiples países de la región,
-      adaptándose a necesidades de industrias financieras, telecom y retail.
-    </p>
+  <!-- MAPA -->
+  <section id="mapa" class="section reveal">
+    <h2>Presencia Regional</h2>
+    <p class="section-desc">Experiencia en proyectos de analítica aplicados en Centroamérica, Caribe y LATAM.</p>
 
     <div class="map-container">
-      <!-- SVG de Centroamérica -->
-      <svg width="360" height="260" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="map-svg">
+
+      <!-- SVG -->
+      <svg width="360" height="260" viewBox="0 0 800 600" class="map-svg">
         <path d="M100 300 L200 250 L320 260 L400 300 L380 360 L260 380 L150 350 Z" fill="#3fa9ff" opacity="0.85"/>
         <path d="M400 300 L500 310 L550 360 L520 420 L430 410 L380 360 Z" fill="#3fa9ff" opacity="0.75"/>
         <path d="M520 420 L600 430 L650 470 L620 520 L530 510 L480 460 Z" fill="#3fa9ff" opacity="0.65"/>
       </svg>
 
+      <!-- DETALLES -->
       <ul class="map-details">
-        <li>✔ Experiencia en modelos de riesgo para portafolios regionales</li>
-        <li>✔ Implementaciones de BI para operaciones multi-país</li>
-        <li>✔ Modelos predictivos adaptados a mercados emergentes</li>
-        <li>✔ Conocimiento en comportamiento crediticio y comercial en LATAM</li>
-        <li>✔ Soluciones escalables para empresas regionales</li>
+        <li>✔ Modelos de riesgo para portafolios regionales</li>
+        <li>✔ Dashboards para operaciones multi-país</li>
+        <li>✔ Modelos predictivos adaptados a LATAM</li>
+        <li>✔ Experiencia en mercados emergentes</li>
+        <li>✔ Soluciones escalables a nivel regional</li>
       </ul>
     </div>
   </section>
 
-
   <!-- CONTACTO -->
-  <section id="contacto" class="section">
+  <section id="contacto" class="section reveal">
     <h2>Contacto</h2>
-    <p class="section-desc">
-      ¿Deseas impulsar tu estrategia con analítica avanzada? Envíanos un mensaje y conversaremos sobre tus objetivos.
-    </p>
+    <p class="section-desc">¿Quieres impulsar tu estrategia con analítica avanzada? Escríbenos.</p>
 
     <div class="contact-box">
       <input type="text" placeholder="Nombre" />
@@ -156,8 +174,34 @@
   </section>
 </main>
 
-<footer>
-  © 2025 DataVision — Analítica, Modelos Predictivos & Ciencia de Datos.
+<!-- FOOTER PROFESIONAL -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>DataVision (NRC)</h4>
+      <p>Analítica, modelos predictivos y soluciones de ciencia de datos.</p>
+    </div>
+
+    <div>
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#about-us">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#mapa">Región</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos de Servicio</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer-copy">© 2025 NRC — Analítica & Ciencia de Datos.</p>
 </footer>
 
 <script src="script.js"></script>
