@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO -->
   <title>DataVision | Analítica, Modelos Predictivos & Ciencia de Datos</title>
   <meta name="description" content="DataVision es un equipo especializado en analítica, modelos predictivos, riesgo crediticio y ciencia de datos para organizaciones en Centroamérica y Latinoamérica.">
   <meta name="keywords" content="analítica, modelos predictivos, ciencia de datos, machine learning, riesgo crediticio, BI, Centroamérica, LATAM">
@@ -17,6 +16,7 @@
 <header class="navbar">
   <div class="logo">DataVision</div>
   <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
+</header>
 
 <div id="overlay"></div>
 
@@ -29,15 +29,13 @@
   <button id="themeToggle" class="toggle-btn">🌙</button>
 </nav>
 
-</header>
-
 <main>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
     <canvas id="bgCanvas"></canvas>
 
-    <div class="hero-content">
+    <div class="hero-content reveal">
       <p class="eyebrow">DataVision</p>
       <h1>Analítica, Modelos Predictivos & Ciencia de Datos</h1>
       <p class="hero-subtitle">
@@ -48,7 +46,7 @@
   </section>
 
   <!-- NOSOTROS -->
-  <section id="about-us" class="section">
+  <section id="about-us" class="section reveal">
     <h2>Nosotros</h2>
     <p class="section-desc">
       DataVision es un equipo especializado en analítica avanzada, machine learning, riesgo crediticio
@@ -56,7 +54,7 @@
       <strong>finanzas, telecomunicaciones y retail</strong>, ayudando a transformar datos en decisiones accionables.
     </p>
 
-    <div class="team-grid">
+    <div class="team-grid reveal">
       <div class="team-card">
         <h3>Equipo actual</h3>
         <p>
@@ -76,67 +74,64 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section id="servicios" class="section">
+  <section id="servicios" class="section reveal">
     <h2>Servicios</h2>
     <p class="section-desc">
       Diseñamos soluciones a medida para equipos de riesgo, analítica, finanzas y estrategia.
     </p>
 
     <div class="grid">
-      <div class="card">
+      <div class="card reveal">
         <h3>Modelos predictivos</h3>
         <p>Scoring, forecasting, segmentación, clasificación y modelos de optimización para distintas líneas de negocio.</p>
       </div>
 
-      <div class="card">
+      <div class="card reveal">
         <h3>Riesgo crediticio</h3>
         <p>Modelos IFRS9 (PD, LGD, EAD), análisis de portafolio, monitoreo y documentación técnica.</p>
       </div>
 
-      <div class="card">
+      <div class="card reveal">
         <h3>Business Intelligence</h3>
         <p>Dashboards ejecutivos, automatización de KPIs y reporting para operaciones multi-país.</p>
       </div>
 
-      <div class="card">
+      <div class="card reveal">
         <h3>Automatización analítica</h3>
         <p>Pipelines de datos, ETL, procesos automáticos en Python y SQL para reducir carga operativa.</p>
       </div>
 
-      <div class="card">
+      <div class="card reveal">
         <h3>IA aplicada & NLP</h3>
         <p>Uso de modelos de lenguaje, clasificación de textos y sistemas de recomendación para acelerar decisiones.</p>
       </div>
 
-      <div class="card">
+      <div class="card reveal">
         <h3>Investigación cuantitativa</h3>
         <p>Encuestas, análisis estadístico y estudios de mercado apoyados en datos reales.</p>
       </div>
     </div>
   </section>
 
-  <!-- REGIÓN / MAPA -->
-  <section id="region" class="section">
+  <!-- REGIÓN -->
+  <section id="region" class="section reveal">
     <h2>Centroamérica & Región</h2>
     <p class="section-desc">
       Experiencia en modelos y soluciones de datos implementadas en distintos países de Centroamérica,
       el Caribe y LATAM.
     </p>
 
-    <div class="map-container">
-      <!-- Mapa de Centroamérica en hexágonos (abstracto) -->
+    <div class="map-container reveal">
       <svg viewBox="0 0 400 260" class="map-svg" aria-hidden="true">
-        <!-- Fila superior -->
+        <!-- Hexagon map as before -->
         <polygon class="hex" points="80,40 110,57 110,91 80,108 50,91 50,57" />
         <polygon class="hex" points="150,40 180,57 180,91 150,108 120,91 120,57" />
         <polygon class="hex" points="220,40 250,57 250,91 220,108 190,91 190,57" />
 
-        <!-- Fila media -->
         <polygon class="hex" points="115,105 145,122 145,156 115,173 85,156 85,122" />
         <polygon class="hex" points="185,105 215,122 215,156 185,173 155,156 155,122" />
         <polygon class="hex" points="255,105 285,122 285,156 255,173 225,156 225,122" />
 
-        <!-- Fila inferior -->
         <polygon class="hex" points="150,170 180,187 180,221 150,238 120,221 120,187" />
         <polygon class="hex" points="220,170 250,187 250,221 220,238 190,221 190,187" />
       </svg>
@@ -151,14 +146,14 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="section">
+  <section id="contacto" class="section reveal">
     <h2>Contacto</h2>
     <p class="section-desc">
       ¿Quieres impulsar tu estrategia con ciencia de datos y analítica avanzada?
       Escríbenos y conversemos sobre tu proyecto.
     </p>
 
-    <div class="contact-box">
+    <div class="contact-box reveal">
       <input type="text" placeholder="Nombre" />
       <input type="email" placeholder="Email" />
       <textarea rows="5" placeholder="Mensaje"></textarea>
@@ -168,7 +163,7 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer reveal">
   <div class="footer-grid">
     <div>
       <h4>DataVision</h4>
@@ -195,6 +190,8 @@
   <p class="footer-copy">© 2025 DataVision — Analítica & Ciencia de Datos.</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- Script optimizado -->
+<script src="script.js" defer></script>
+
 </body>
 </html>
