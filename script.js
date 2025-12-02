@@ -1,13 +1,19 @@
-// Background Canvas
+// ----------------------------
+// Background Canvas Animación
+// ----------------------------
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 let w, h, particles;
 
-function init() {
+function resizeCanvas() {
   w = canvas.width = window.innerWidth;
   h = canvas.height = window.innerHeight;
+}
 
+function init() {
+  resizeCanvas();
   particles = [];
+
   for (let i = 0; i < 60; i++) {
     particles.push({
       x: Math.random() * w,
@@ -30,6 +36,7 @@ function animate() {
 
     p.x += p.dx;
     p.y += p.dy;
+
     if (p.x < 0 || p.x > w) p.dx *= -1;
     if (p.y < 0 || p.y > h) p.dy *= -1;
   });
@@ -37,20 +44,31 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-window.addEventListener('resize', init);
-init();
-animate();
+window.addEventListener('load', () => {
+  init();
+  animate();
+});
 
-// Burger menu
+window.addEventListener('resize', () => {
+  resizeCanvas();
+});
+
+// ----------------------------
+// Burger Menu
+// ----------------------------
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav-menu');
 
 burger.addEventListener('click', () => {
-  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  const visible = nav.style.display === 'flex';
+  nav.style.display = visible ? 'none' : 'flex';
 });
 
+// ----------------------------
 // Theme toggle
+// ----------------------------
 const toggle = document.getElementById('themeToggle');
+
 toggle.onclick = () => {
   const html = document.documentElement;
   const newTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
