@@ -1,6 +1,4 @@
-// ----------------------------
-// Background Canvas Animación
-// ----------------------------
+// Background Canvas
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 let w, h, particles;
@@ -53,42 +51,47 @@ window.addEventListener('resize', () => {
   resizeCanvas();
 });
 
-// ----------------------------
-// Burger Menu
-// ----------------------------
-const burger = document.getElementById('burger');
-const nav = document.getElementById('nav-menu');
 
-burger.addEventListener('click', () => {
-  const visible = nav.style.display === 'flex';
-  nav.style.display = visible ? 'none' : 'flex';
+// 🔥 UNIVERSAL BURGER MENU (Desktop + Móvil)
+const burger = document.getElementById("burger");
+const navMenu = document.getElementById("nav-menu");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("close-menu");
+
+burger.addEventListener("click", () => {
+  navMenu.classList.add("open");
+  overlay.classList.add("show");
 });
 
-// ----------------------------
-// Theme toggle
-// ----------------------------
-const toggle = document.getElementById('themeToggle');
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.remove("open");
+  overlay.classList.remove("show");
+});
 
-toggle.onclick = () => {
-  const html = document.documentElement;
-  const newTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-  html.dataset.theme = newTheme;
-  toggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
-};
+overlay.addEventListener("click", () => {
+  navMenu.classList.remove("open");
+  overlay.classList.remove("show");
+});
+
 
 // Scroll Reveal
 const revealElements = document.querySelectorAll('.reveal');
-
 function revealOnScroll() {
   const trigger = window.innerHeight * 0.85;
-
   revealElements.forEach(el => {
     const top = el.getBoundingClientRect().top;
-    if (top < trigger) {
-      el.classList.add('visible');
-    }
+    if (top < trigger) el.classList.add('visible');
   });
 }
-
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+
+// Theme toggle
+const toggle = document.getElementById("themeToggle");
+toggle.onclick = () => {
+  const html = document.documentElement;
+  const newTheme = html.dataset.theme === "dark" ? "light" : "dark";
+  html.dataset.theme = newTheme;
+  toggle.textContent = newTheme === "dark" ? "🌙" : "☀️";
+};
