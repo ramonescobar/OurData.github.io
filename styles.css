@@ -1,4 +1,18 @@
 /* ===========================================
+   RESET BÁSICO
+=========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================================
    VARIABLES LIGHT / DARK THEME
 =========================================== */
 :root {
@@ -18,7 +32,6 @@
 }
 
 body {
-  margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, sans-serif;
@@ -29,22 +42,28 @@ body {
    NAVBAR + MENU LATERAL
 =========================================== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 18px 24px;
-  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: var(--bg);
   z-index: 500;
+  display: flex;
+  justify-content: center;      /* centra el nombre */
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .logo {
   font-size: 1.4rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .burger {
+  position: absolute;           /* lo llevamos a la derecha */
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.9rem;
   background: none;
   border: none;
@@ -52,6 +71,7 @@ body {
   color: var(--text);
 }
 
+/* Overlay */
 #overlay {
   position: fixed;
   inset: 0;
@@ -68,24 +88,25 @@ body {
   visibility: visible;
 }
 
+/* Menú lateral */
 nav#nav-menu {
   position: fixed;
   top: 0;
-  right: -320px;
-  width: 320px;
+  right: -100%;                          /* escondido fuera de pantalla */
+  width: min(320px, 80%);
   height: 100%;
   background: var(--bg);
-  border-left: 1px solid var(--border);
   padding: 40px 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   transition: right 0.3s ease;
   z-index: 1000;
+  border-left: 1px solid var(--border);
 }
 
 nav#nav-menu.open {
-  right: 0;
+  right: 0;                              /* entra limpio desde la derecha */
 }
 
 nav#nav-menu a {
@@ -121,6 +142,7 @@ nav#nav-menu a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 #bgCanvas {
@@ -133,8 +155,14 @@ nav#nav-menu a {
 .hero-content {
   position: relative;
   z-index: 2;
+  max-width: 700px;
 }
 
+.hero-subtitle {
+  margin-top: 8px;
+}
+
+/* Botón principal */
 .btn-primary {
   background: var(--primary);
   padding: 12px 18px;
@@ -155,11 +183,11 @@ nav#nav-menu a {
 }
 
 .section-desc {
-  max-width: 700px;
+  max-width: 720px;
 }
 
 /* GRID */
-.grid, .team-grid {
+.grid, .team-grid, .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
@@ -176,6 +204,15 @@ nav#nav-menu a {
 /* ===========================================
    MAPA
 =========================================== */
+.map-container {
+  margin-top: 40px;
+}
+
+.map-svg {
+  max-width: 100%;
+  height: auto;
+}
+
 .map-svg .hex {
   fill: var(--primary);
   opacity: 0.7;
@@ -214,10 +251,8 @@ nav#nav-menu a {
   background: var(--bg);
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+.footer-copy {
+  margin-top: 24px;
 }
 
 /* ===========================================
