@@ -300,3 +300,84 @@ nav#nav-menu a {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* ===========================================================
+   TEAM PROFILE CARDS (Estilo premium tipo McKinsey/Anthropic)
+=========================================================== */
+
+.team-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.team-profile-card {
+  background: #e8e1d5; /* beige corporativo */
+  padding: 40px 28px;
+  text-align: center;
+  border-radius: 22px; /* bordes redondeados suaves */
+  border: 1px solid #d2c7b8;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.team-profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* foto circular */
+  margin-bottom: 20px;
+  border: 4px solid white;
+  background: white;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 10px 0 4px;
+}
+
+.team-role {
+  font-size: 1rem;
+  opacity: 0.75;
+  margin-bottom: 14px;
+}
+
+.team-desc {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 22px;
+  opacity: .9;
+}
+
+.team-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.team-icons a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #333;
+  background: white;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  transition: 0.25s;
+}
+
+.team-icons a:hover {
+  background: #ded7c8;
+}
+
